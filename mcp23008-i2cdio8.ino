@@ -23,5 +23,6 @@ void loop() {
         }else{
             //input is low
         }
+        previousInputState = status;
     }
 }
