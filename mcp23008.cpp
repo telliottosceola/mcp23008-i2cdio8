@@ -29,17 +29,6 @@ void MCP23008::setAddress(int a0, int a1, int a2){
     }else{
         initialized = true;
     }
-    
-    Wire.beginTransmission(address);
-    Wire.write(0x06);
-    Wire.write(0xff);
-    status = Wire.endTransmission();
-    if(status != 0){
-        initialized = false;
-        return;
-    }else{
-        initialized = true;
-    }
 }
 
 int MCP23008::readAllInputs(){
